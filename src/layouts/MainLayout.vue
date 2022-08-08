@@ -21,20 +21,20 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-dark"
     >
       <q-list>
-        <q-item-label header class="text-grey-8">
+        <q-item-label header class="text-grey-8 text-h6">
           Menu
         </q-item-label>
         <q-item clickable @click="$router.push({name:'login'})">
 
             <q-item-section avatar>
-              <q-icon name='exit_to_app' />
+              <q-icon name='exit_to_app' color="white" size="25px" />
             </q-item-section>
 
             <q-item-section>
-              <q-item-label>Logout</q-item-label>
+              <q-item-label class="text-weight-bold text-white">Logout</q-item-label>
             </q-item-section>
 
         </q-item>
