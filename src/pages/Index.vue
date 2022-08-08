@@ -7,13 +7,12 @@
 
     <div class="col-5 q-pa-sm bg-accent">
       <q-card class="my-card">
-        <q-card-section @click='openModal'>
-          <q-input color="teal-5" v-model="text" label="No que você esta pensando">
-            <template v-slot:prepend>
-              <q-icon name="description" />
-            </template>
-          </q-input>
-        </q-card-section>
+        <q-item clickable v-ripple  @click='openModal'>
+          <q-item-section avatar>
+            <q-icon color="primary" name="description" />
+          </q-item-section>
+          <q-item-section class="text-h6">No que você está pensando</q-item-section>
+        </q-item>
       </q-card>
       <ModalApp :show="show" @closed='closeModal' />
     </div>

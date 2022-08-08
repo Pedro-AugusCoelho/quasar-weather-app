@@ -10,7 +10,7 @@
         <q-separator class="q-mt-sm" />
 
         <q-card-section style="max-height: 50vh" class="scroll q-px-sm" >
-          <q-input filled  color="teal-5" v-model="text" label="No que você esta pensando" class='full-width' />
+          <q-input filled  color="teal-5" v-model="text" placeholder="No que você esta pensando" type='textarea' class='full-width' />
         </q-card-section>
 
         <q-card-actions>
