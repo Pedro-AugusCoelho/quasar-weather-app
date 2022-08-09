@@ -16,6 +16,7 @@
         <q-card-actions>
           <q-btn label="Publicar" color="secondary" v-close-popup @click="closed" class="full-width" />
         </q-card-actions>
+
       </q-card>
     </q-dialog>
 </template>
@@ -25,22 +26,21 @@
 export default {
   name: 'Modal',
   props: ['show'],
-  watch: {
-    show () {
-      this.isShow = this.show
-    },
-    isShow () {
-    }
-  },
   data () {
     return {
       isShow: false,
       text: ''
     }
   },
+  watch: {
+    show () {
+      this.isShow = this.show
+    }
+  },
   methods: {
     closed () {
       this.$emit('closed', this.isShow)
+      this.text = ''
     }
   }
 }

@@ -5,18 +5,12 @@
       <ListPerfil />
     </div>
 
-    <div class="col-5 q-pa-sm bg-accent">
-      <q-card class="my-card">
-        <q-item clickable v-ripple  @click='openModal'>
-          <q-item-section avatar>
-            <q-icon color="primary" name="description" />
-          </q-item-section>
-          <q-item-section class="text-h6">No que você está pensando</q-item-section>
-        </q-item>
-      </q-card>
+    <div class="col-6 q-pa-sm">
+      <Publication :openModal='openModal' />
       <ModalApp :show="show" @closed='closeModal' />
     </div>
-    <div class="col-4 bg-positive"></div>
+
+    <div class="col-3 bg-positive">Hello</div>
   </q-page>
 </template>
 
@@ -24,10 +18,11 @@
 import AvatarApp from '../components/Perfil/AvatarPerfil.vue'
 import ListPerfil from '../components/Perfil/ListPerfil.vue'
 import ModalApp from '../components/Modal/Index.vue'
+import Publication from 'src/components/Publication/index.vue'
 
 export default {
   name: 'PageIndex',
-  components: { AvatarApp, ListPerfil, ModalApp },
+  components: { AvatarApp, ListPerfil, ModalApp, Publication },
   data () {
     return {
       text: '',
